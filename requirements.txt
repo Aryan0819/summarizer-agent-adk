@@ -1,0 +1,5 @@
+google-cloud-aiplatform
+google-adk
+flask
+gunicorn
+functions-framework
