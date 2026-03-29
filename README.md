@@ -74,4 +74,10 @@ Before submitting your project to the track evaluators, ensure you have complete
    git commit -m "Finalizing documentation and deployment steps"
    git push origin main
    ```
-   
+2. **Cloud Run Service URL:** After running the gcloud run deploy command, copy the generated Service URL. It should look like: https://summarizer-agent-xxxxxxxxxx.a.run.app
+3. **Live Testing:** Verify your deployment is active and the Gemini API is responding by running this command in your terminal (replace <YOUR_SERVICE_URL> with your actual Cloud Run link):
+   ```bash
+   curl -X POST <YOUR_SERVICE_URL> \
+     -H "Content-Type: application/json" \
+     -d '{"text": "The $300 Google Cloud credit allows students to explore enterprise-grade AI tools. It is a vital resource for learning production-level deployment."}'
+    ```
